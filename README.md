@@ -3,7 +3,7 @@ Cognito to CloudWatch Dashboard
 
 ## Goal of this Project
 
-A simple implementation to streamline access to CloudWatch Dashboards.
+An easy to manage project for streamlining access to CloudWatch Dashboards.
 
 ## Flow
 
