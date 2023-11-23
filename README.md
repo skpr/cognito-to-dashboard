@@ -1,6 +1,11 @@
 Cognito to CloudWatch Dashboard
 ===============================
 
+[![📋 Vet](https://github.com/skpr/cognito-to-dashboard/actions/workflows/vet.yml/badge.svg?branch=main)](https://github.com/skpr/cognito-to-dashboard/actions/workflows/vet.yml)
+[![📋 Format](https://github.com/skpr/cognito-to-dashboard/actions/workflows/fmt.yml/badge.svg?branch=main)](https://github.com/skpr/cognito-to-dashboard/actions/workflows/fmt.yml)
+[![Test](https://github.com/skpr/cognito-to-dashboard/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/skpr/cognito-to-dashboard/actions/workflows/test.yml)
+[![Lint](https://github.com/skpr/cognito-to-dashboard/actions/workflows/lint.yml/badge.svg?branch=main)](https://github.com/skpr/cognito-to-dashboard/actions/workflows/lint.yml)
+
 ## Goal of this Project
 
 An easy to manage project for streamlining access to CloudWatch Dashboards.
