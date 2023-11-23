@@ -64,6 +64,10 @@ func (s *DashboardServer) Callback(c *gin.Context) {
 		IdentityPool:     s.config.IdentityPool,
 		IdentityProvider: s.config.IdentityProvider,
 	})
+	if err != nil {
+		c.String(http.StatusInternalServerError, err.Error())
+		return
+	}
 
 	dashboardURL := cloudwatchdashboard.GetURI(s.config.Region, dashboardName)
 
