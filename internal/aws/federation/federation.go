@@ -3,7 +3,8 @@ package federation
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
+	"io"
+	"log"
 	"net/http"
 	"net/url"
 	"strconv"
@@ -40,9 +41,14 @@ func GetSignInLink(credentials aws.Credentials, issuer, dashboardURL string, dur
 	if err != nil {
 		return "", fmt.Errorf("failed getting federation URL: %w", err)
 	}
-	defer response.Body.Close()
+	defer func() {
+		err := response.Body.Close()
+		if err != nil {
+			log.Print(err)
+		}
+	}()
 
-	bodyBytes, err := ioutil.ReadAll(response.Body)
+	bodyBytes, err := io.ReadAll(response.Body)
 	if err != nil {
 		return "", fmt.Errorf("failed reading response body: %w", err)
 	}
